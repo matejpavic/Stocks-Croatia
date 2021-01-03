@@ -1,23 +1,12 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 
-// const func = () => {return fetch("https://rest.zse.hr/web/Bvt9fe2peQ7pwpyYqODM/price-list/XZAG/2020-12-30/json")
-//   .then(response => {return response.json()})
-//   .then(data => {let database = data; return database;}).then(() => console.log('Ovaj dio znam da radi'))
-//   .catch(err => console.log(err));
-// }
-
-// func();
-// console.log(database);
-
-// let dateAndTime = new Date(database.timestamp).toDateString();
-
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 
-// Idiotima je u fetch url kriva godina 2020
+//  Wrong year in the url...host mistake
 // var yyyy = today.getFullYear();
 var yyyy = '2020';
 
